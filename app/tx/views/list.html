@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h1 class="panel-title pull-left">Treatment Schedule</h1>
+      <div class="btn-group pull-right">
+        <a ng-if="txCtl.isAuthenticated()" href="#/tx/new" class="btn btn-success btn-sm">Create New Reminder</a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <section data-ng-repeat="tx in txCtl.txs">
+              <h2>{{tx.title}}</h2>
+
+              <p>{{tx.time}}</p>
+              <p>{{tx.content}}</p>
+              <a href="#/tx/{{tx._id}}">update</a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

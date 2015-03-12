@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading"><h1>{{txCtl.tx.title}}</h1></div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <section>
+            <div class="form-group">
+              <label for="txTitle">Treatment</label>
+              <input class="form-control" name="txTitle" type="text" data-ng-model="txCtl.tx.title" value="{{txCtl.tx.title}}">
+            </div>
+
+            <div class="form-group">
+              <label for="txTime">Time</label>
+              <input class="form-control" name="txTime" type="text" data-ng-model="txCtl.tx.time" value="{{txCtl.tx.time}}">
+            </div>
+
+            <div class="form-group">
+              <label for="txContent">Notes</label>
+              <textarea name="postContent" class="form-control" data-ng-model="txCtl.tx.content">{{txCtl.tx.content}}</textarea>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" data-ng-click="txCtl.editTx(txCtl.tx)">Update Med</button>
+            </div>
+<h1>is this working?</h1>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

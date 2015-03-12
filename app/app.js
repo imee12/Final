@@ -5,15 +5,16 @@ angular.module('MyApp', [
   'mgcrea.ngStrap',
   'auth',
   'profile',
-  'posts'])
+  'tx',
+  'posts',])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'home/views/home.html'
       })
-      .when('/parent', {
-        templateUrl: 'home/views/medtx.html'
-      })
+      // .when('/parent', {
+      //   templateUrl: 'home/views/parent.html'
+      // })
 
       .when('/404', {
         template: '<h1>Sorry, page not found</h1>'

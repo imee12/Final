@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading"><h1>New Reminder</h1></div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <section>
+
+
+
+
+            <div class="form-group">
+              <label for="newTitle">Treatment</label>
+              <input class="form-control" type="text" name="newTitle" data-ng-model="tx.title" placeholder="Type">
+            </div>
+          <!--   <div class="form-group">
+            <label for="newTitle">Dosage</label>
+            <input class="form-control" type="text" name="newDose" data-ng-model="post.dose" placeholder="Dosage">
+          </div> -->
+            <div class="form-group">
+              <label for="newTitle">Time</label>
+              <input class="form-control" type="text" name="newTime" data-ng-model="tx.time" placeholder="Time">
+            </div>
+            <div class="form-group">
+              <label for="newContent">Notes</label>
+              <textarea class="form-control" name="newContent" data-ng-model="tx.content"></textarea>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" data-ng-click="txCtl.createTx(tx)">Create</button>
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

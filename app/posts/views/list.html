@@ -1,9 +1,9 @@
 <div class="container">
   <div class="panel panel-default">
     <div class="panel-heading clearfix">
-      <h1 class="panel-title pull-left">Blog Posts</h1>
+      <h1 class="panel-title pull-left">Medication Schedule</h1>
       <div class="btn-group pull-right">
-        <a ng-if="postsCtl.isAuthenticated()" href="#/posts/new" class="btn btn-success btn-sm">Create New Post</a>
+        <a ng-if="postsCtl.isAuthenticated()" href="#/posts/new" class="btn btn-success btn-sm">Create New Reminder</a>
       </div>
     </div>
     <div class="panel-body">
@@ -11,8 +11,10 @@
         <div class="col-sm-12">
           <section data-ng-repeat="post in postsCtl.posts">
               <h2>{{post.title}}</h2>
-              <p>{{post.content | limitTo: 255}}</p>
-              <a href="#/posts/{{post._id}}">view more</a>
+              <p>{{post.dose}}</p>
+              <p>{{post.time}}</p>
+              <p>{{post.content}}</p>
+              <a href="#/posts/{{post._id}}">update</a>
           </section>
         </div>
       </div>

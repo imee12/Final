@@ -6,15 +6,24 @@
         <div class="col-sm-12">
           <section>
             <div class="form-group">
-              <label for="postTitle">Post Title</label>
+              <label for="postTitle">Medication</label>
               <input class="form-control" name="postTitle" type="text" data-ng-model="postsCtl.post.title" value="{{postsCtl.post.title}}">
             </div>
+            <div class="form-group">
+              <label for="postDose">Dose</label>
+              <input class="form-control" name="postDose" type="text" data-ng-model="postsCtl.post.dose" value="{{postsCtl.post.dose}}">
+            </div>
+            <div class="form-group">
+              <label for="postTime">Dose</label>
+              <input class="form-control" name="postTime" type="text" data-ng-model="postsCtl.post.time" value="{{postsCtl.post.time}}">
+            </div>
+
             <div class="form-group">
               <label for="postContent">Post Content</label>
               <textarea name="postContent" class="form-control" data-ng-model="postsCtl.post.content">{{postsCtl.post.content}}</textarea>
             </div>
             <div class="form-group">
-              <button class="btn btn-primary" data-ng-click="postsCtl.editPost(postsCtl.post)">Update Post</button>
+              <button class="btn btn-primary" data-ng-click="postsCtl.editPost(postsCtl.post)">Update Med</button>
             </div>
 
           </section>

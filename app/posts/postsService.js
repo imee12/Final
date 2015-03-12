@@ -5,6 +5,7 @@
         .module('posts')
         .factory('postsService', ['$http', '$rootScope', function ($http, $rootScope) {
 
+
             // public service methods
             return {
                 getPosts: getPosts,
@@ -16,11 +17,14 @@
 
             function getPosts() {
 
-                return $http.get("api/collections/demotiy");
+              return $http.get("api/collections/demotiy");
+
             }
 
             function getPost(postId) {
-                return $http.get("api/collections/demotiy/" + postId);
+              return $http.get("api/collections/demotiy/" + postId);
+
+
             }
 
             function createPost(newPost) {
@@ -30,14 +34,14 @@
             }
 
             function editPost(post) {
-                $http.put("api/collections/demotiy/" + post._id, post).then(function (res) {
+                $http.put("api/collections/demotiy" + post._id, post).then(function (res) {
                     $rootScope.$broadcast("post:updated");
                 });
 
             }
 
             function deletePost(postId) {
-                $http.delete("api/collections/demotiy/" + postId).then(function (res) {
+                $http.delete("api/collections/demotiy" + postId).then(function (res) {
                     $rootScope.$broadcast("post:deleted");
                 });
             }

@@ -11,6 +11,10 @@ angular.module('MyApp', [
       .when('/', {
         templateUrl: 'home/views/home.html'
       })
+      .when('/parent', {
+        templateUrl: 'home/views/medtx.html'
+      })
+
       .when('/404', {
         template: '<h1>Sorry, page not found</h1>'
       })

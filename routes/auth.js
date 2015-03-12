@@ -40,7 +40,7 @@ router.route('/login')
         if (!isMatch) {
           return res.status(401).send({ message: 'Wrong email and/or password' });
         }
-        res.send({ token: createToken(user) });
+        res.send({ token: createToken(user), phone: user.phone });
       });
     });
   });
@@ -60,10 +60,11 @@ router.route('/login')
       var user = new User({
         displayName: req.body.displayName,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        phone: req.body.phone
       });
       user.save(function() {
-        res.send({ token: createToken(user) });
+        res.send({ token: createToken(user), phone: user.phone });
       });
     });
   });
